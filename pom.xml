@@ -20,6 +20,21 @@
     </properties>
 
     <dependencies>
+        <!-- Web  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -71,6 +86,10 @@
             <artifactId>maven-shade-plugin</artifactId>
             <version>3.2.2</version>
             <type>maven-plugin</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
     </dependencies>
 
@@ -126,6 +145,7 @@
                                         <exclude>**.domains.*</exclude>
                                         <exclude>**.exceptions.*</exclude>
                                         <exclude>**.Application</exclude>
+                                        <exclude>**.EcommerceApplication</exclude>
                                     </excludes>
                                 </rule>
                             </rules>
